@@ -1,0 +1,8 @@
+---
+permalink: /api/resultsTree.json
+---
+{%- set results = collections.results -%}
+{%- set subjects = collections.subjects -%}
+{%- set grades = collections.grades -%}
+{%- set areas = collections.areas -%}
+{% subjectTree results, subjects, grades, areas %}
