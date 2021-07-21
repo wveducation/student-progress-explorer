@@ -1,0 +1,50 @@
+---
+layout: page
+container: false
+---
+<div class="py-12">
+<div class="container px-6">
+    <h2 class="text-2xl text-center font-bold mb-4">Data summary</h2>
+
+    <table class="mx-auto mb-12">
+        <thead class="border-b border-solid border-black">
+            <th class="px-4" align="left">Subject</th>
+            <th class="px-4" align="left">Grade</th>
+            <th class="px-4" align="left">Area</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="px-4">{{ subject }}</td>
+                <td class="px-4">{{ grade }}</td>
+                <td class="px-4">{{ area }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</div>
+
+{% if questions %}
+<div class="bg-gray-50 py-14">
+<div class="container px-6">
+    <h2 class="text-4xl text-center"><span class="font-bold">Sample</span> Test Questions</h2>
+
+    {% if questions %}
+    <div class="grid md:grid-cols-3 gap-x-12 gap-y-4 py-6">
+    {% for question in questions %}
+        <div x-data="{ isOpen: false }" class="shadow-2xl rounded-xl border border-black border-opacity-10 bg-white">
+            <div class="p-6">
+                <div class="font-bold text-center mb-4">{{ question.qa.question }}</div>
+                <div class="text-center">
+                    <button @click="isOpen = !isOpen" class="py-2 px-6 bg-green-600 text-white rounded-full">Show Correct Answer</button>
+                </div>
+            </div>
+            <div :hidden="!isOpen" class="p-6 bg-green-100">
+                {{ question.qa.answer }}
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+    {% endif %}
+</div>
+</div>
+{% endif %}

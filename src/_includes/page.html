@@ -1,0 +1,16 @@
+---
+layout: default
+container: true
+title: Default Title
+---
+{% if container %}
+<div class="container px-6">
+{% endif %}
+    {% include 'partials/filterBar.html' %}
+    
+    <h1 class="text-5xl font-bold mb-10">{{ title }}</h1>
+
+    {{ content | safe }}
+{% if container %}
+</div>
+{% endif %}

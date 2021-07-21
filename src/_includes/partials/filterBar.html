@@ -1,0 +1,48 @@
+<div class="overflow-hidden max-w-3xl mx-auto mb-10 border border-black border-opacity-40 rounded-full">
+  <form 
+  class="grid grid-cols-4 gap-4" 
+  x-data="{
+    selection: {
+      subject: '{{subject}}' || null,
+      grade: '{{grade}}' || null,
+      area: '{{area}}' || null,
+    },
+    readyToSubmit: true,
+    data: finderTree
+  }" 
+  x-on:submit="location = `${data[selection.subject].grades[selection.grade].areas[selection.area].url}`; " 
+  @submit.prevent
+  >
+  
+    <select class="p-4" x-model="selection.subject" @change="selection.grade = null; selection.area = null;">
+      <option hidden>select subject</option>
+      <template 
+        x-for="[id, value] in Object.entries(data)" 
+        :key="id">
+        <option :value="id" :selected="id == selection.subject" x-text="value.name"></option>
+      </template>
+    </select>
+
+    <select class="p-4" x-model="selection.grade" @change="selection.area = null;">
+      <option hidden>select grade</option>
+      <template 
+        x-if="data[selection.subject] != null" 
+        x-for="[id, value] in Object.entries(data[selection.subject].grades) || []" 
+        :key="id">
+        <option :value="id" :selected="id == selection.grade" x-text="value.name"></option>
+      </template>
+    </select>
+
+    <select class="p-4" x-model="selection.area">
+      <option hidden>select area</option>
+      <template 
+        x-if="data[selection.subject].grades[selection.grade] != null" 
+        x-for="[id, value] in Object.entries(data[selection.subject].grades[selection.grade].areas) || []" 
+        :key="id">
+        <option :value="id" :selected="id == selection.area" x-text="value.name"></option>
+      </template>
+    </select>
+
+    <input type="submit" class="bg-blue-400 text-white cursor-pointer" />
+  </form>
+</div>
