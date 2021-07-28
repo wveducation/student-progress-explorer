@@ -11,14 +11,12 @@
 - [Alpine.js](https://github.com/alpinejs/alpine)
 - [Tailwind CSS](https://tailwindcss.com/)
 
-| ![image](https://user-images.githubusercontent.com/1884712/93762662-a62e4700-fc2d-11ea-9b2c-fda9f503402b.png) |
-| ------------------------------------------------------------------------------------------------------------- |
-
 
 <a href="https://app.netlify.com/start/deploy?repository=https://github.com/aaronlsilber/wvde-student-progress-11ty-demo&amp;stack=cms"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" /></a>
 
-## Getting Started
+------
 
+## Getting Started
 
 ### 1\. Clone this Repository
 
@@ -52,6 +50,25 @@ npm run build
 npm run start
 ```
 
-## Author
+------
 
-Aaron Silber
+## Import Utility
+
+We've created an importer utility that accepts a `.csv` document and generates `.md` files for the `results` collection. 
+
+To run the importer using the default config;
+```
+npm run import-results
+```
+This assumes your `csv` is at `/data/results.csv` and you want to spit out markdown files to `src/results`. We've included a `results-template.csv` file as a guide for how the import expects your data to be structured.
+
+Running `npm run import` allows you to specify options for `--source`, `--destination`, and `--filename` format as well. Run `npm import -- --help` for a full list of options.
+
+Example:
+```
+npm run import -- --source recipes/data.csv --destination src/recipes --filename 'recipe-${post.slug}.md'
+```
+
+## Authors
+
+Aaron Silber, [WV Department of Education](https://wvde.us)

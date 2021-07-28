@@ -7,3 +7,7 @@ _site/
 *git/
 package-lock.json
 .env
+
+# Importer Data
+/data/*
+!/data/results-template.csv
