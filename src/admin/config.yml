@@ -66,6 +66,7 @@ collections:
     fields:
       - { label: "Name", name: "name", widget: "string" }
       - { label: "ID", name: "id", widget: "string", pattern: ['^[a-z]+$', "Lowercase a-z characters only. No spaces or special characters."] }
+      - { label: "Featured Image", name: "image", widget: "image" }
 
   - label: "Grade"
     label_plural: 'Grades'
@@ -96,30 +97,12 @@ collections:
     editor:
       preview: false
     files:
-      - label: "Navigation"
-        name: "items"
-        file: "src/_data/navigation.yaml"
+      - label: "Global Action"
+        name: "global_action"
+        file: "src/_data/global-action.yaml"
         fields:
-          - label: Nav Items
-            name: items
-            widget: list
-            allow_add: false
-            collapsed: false
-            fields:
-              - { label: Title, name: text, widget: string }
-              - { label: URL, name: url, widget: string }
-      - label: "Quick Links"
-        name: "links"
-        file: "src/_data/quicklinks.yaml"
-        fields:
-          - label: Nav Items
-            name: links
-            widget: list
-            collapsed: false
-            fields:
-              - { label: Title, name: title, widget: string }
-              - { label: URL, name: url, widget: string }
-              - { label: Description, name: desc, widget: string }
+          - { label: URL, name: url, widget: string }
+          - { label: Text, name: text, widget: string }
       - label: "Meta Settings"
         name: "settings"
         file: "src/_data/settings.yaml"
