@@ -1,4 +1,4 @@
 ---
-name: "5"
+name: Grade 5
 id: "5"
 ---

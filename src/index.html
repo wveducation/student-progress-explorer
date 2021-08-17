@@ -2,9 +2,13 @@
 layout: default
 title: Student Progress Tech Demo
 path: home
+description: "Assessment of Student Performance and Progress"
+globalaction: 
+    - text: global_action.text
+    - url: global_action.url
 ---
 {% set subjectList = collections.subjects %}
-<div class="container mx-auto px-6">
-  <h1 class="text-center text-4xl font-bold mb-10">Student Progress Tech Demo</h1>
-  {% include 'partials/filterBar.html' %}
-</div>
+{% include 'blocks/hero.html' %}
+{% include 'blocks/understanding-score-reports.html' %}
+{% include 'blocks/test-questions-intro.html' %}
+{% include 'blocks/free-resources.html' %}
