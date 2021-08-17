@@ -1,8 +1,3 @@
----
-global_action:
-  url: params.global_action.url,
-  text: params.global_action.text
----
 {%- from "system/component.html" import component -%}
 <!DOCTYPE html>
 <html lang="en">
@@ -26,7 +21,7 @@ global_action:
     <link rel="stylesheet" type="text/css" href="/static/fonts/icons/style.css"/>
     <link rel="stylesheet" type="text/css" href="/static/css/style.css"/>
     {% if prism == true %}
-      <link rel="stylesheet" type="text/css" href="/static/css/prism-tomorrow.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/prism-tomorrow.css">
     {% endif %}
   </head>
   <body>

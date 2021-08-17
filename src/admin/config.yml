@@ -99,7 +99,7 @@ collections:
     files:
       - label: "Global Action"
         name: "global_action"
-        file: "src/_data/global-action.yaml"
+        file: "src/_data/global_action.yaml"
         fields:
           - { label: URL, name: url, widget: string }
           - { label: Text, name: text, widget: string }
