@@ -1,3 +1,9 @@
+---
+global_action:
+  url: params.global_action.url,
+  text: params.global_action.text
+---
+{%- from "system/component.html" import component -%}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -11,20 +17,40 @@
       <meta name="description" content="{{description}}"/>
     {% endif %}
     {% block head %}{% endblock %}
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&family=Vollkorn:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="/static/fonts/icons/style.css"/>
     <link rel="stylesheet" type="text/css" href="/static/css/style.css"/>
     {% if prism == true %}
       <link rel="stylesheet" type="text/css" href="/static/css/prism-tomorrow.css">
     {% endif %}
-    {% include "./system/subjectTree.html" %}
   </head>
   <body>
-    {% include "./partials/navbar.html" %}
+    <div id="skip-link" tabindex="-1" class="bg-brand_lightblue text-white">
+      <a class="sr-only focus:not-sr-only block px-5 py-2" href="#main-content">Skip to main content</a>
+    </div>
 
-    {{ content | safe }}
+    {{ component('header', {
+      global_action: {
+        'text': global_action.text,
+        'url': global_action.url
+      }
+    }) }}
+
+    <main id="main-content">
+      {{ content | safe }}
+    </main>
 
     {% include "./partials/footer.html" %}
 
-    <script src="/static/js/alpine.js"></script>
+    <!-- Alpine Plugins -->
+    <script defer src="https://unpkg.com/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
+    <!-- Alpine Core -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.2.3/cdn.min.js" defer></script>
 
     {% if path == "home" %}
       <!-- Netlify Identity Widget -->

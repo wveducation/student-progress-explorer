@@ -1,50 +1,92 @@
 ---
-layout: page
+layout: default
 container: false
+description: "Gain a deeper understanding of what your child has mastered and areas where your child may need more help."
 ---
-<div class="py-12">
-<div class="container px-6">
-    <h2 class="text-2xl text-center font-bold mb-4">Data summary</h2>
-
-    <table class="mx-auto mb-12">
-        <thead class="border-b border-solid border-black">
-            <th class="px-4" align="left">Subject</th>
-            <th class="px-4" align="left">Grade</th>
-            <th class="px-4" align="left">Area</th>
-        </thead>
-        <tbody>
-            <tr>
-                <td class="px-4">{{ subject }}</td>
-                <td class="px-4">{{ grade }}</td>
-                <td class="px-4">{{ area }}</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-</div>
-
-{% if questions %}
-<div class="bg-gray-50 py-14">
-<div class="container px-6">
-    <h2 class="text-4xl text-center"><span class="font-bold">Sample</span> Test Questions</h2>
-
-    {% if questions %}
-    <div class="grid md:grid-cols-3 gap-x-12 gap-y-4 py-6">
-    {% for question in questions %}
-        <div x-data="{ isOpen: false }" class="shadow-2xl rounded-xl border border-black border-opacity-10 bg-white">
-            <div class="p-6">
-                <div class="font-bold text-center mb-4">{{ question.qa.question }}</div>
-                <div class="text-center">
-                    <button @click="isOpen = !isOpen" class="py-2 px-6 bg-green-600 text-white rounded-full">Show Correct Answer</button>
+{%- from "system/component.html" import component -%}
+{% set gradeName %}{%- getItemName collections.grades, grade -%}{% endset %}
+{% set featuredImage %}{%- getSubjectField collections.subjects, subject, 'image' -%}{% endset %}
+<article>
+    <header class="relative py-20 bg-brand_lightblue text-white">
+        <div class="container relative z-20">
+            <div class="grid md:grid-cols-12 gap-default">
+                <div class="md:row-start-1 md:col-start-7 md:col-end-13">
+                {% if featuredImage !== 'undefined' %}
+                    {% image { 
+                        src: "./src/" + featuredImage, 
+                        alt: "", 
+                        cls: "rounded-default",
+                        styleName: "medium_half"
+                    } %}
+                {% else %}
+                    {% image { 
+                        src: "./src/static/img/default-image.png", 
+                        alt: "", 
+                        cls: "rounded-default",
+                        styleName: "medium_half"
+                    } %}
+                {% endif %}
+                </div>
+                <div class="md:row-start-1 md:col-start-1 md:col-end-6 flex flex-col justify-center text-center md:text-left">
+                    <h1 class="mb-8">
+                        <div class="text-6xl font-bold mb-2">{{ gradeName }}</div>
+                        <div class="text-2xl font-sans font-normal">{% getItemName collections.subjects, subject %}: {% getItemName collections.areas, area %}</div>
+                    </h1>
+            
+                    <p class="text-xl">Use the information below to get a deeper understanding of what your child has mastered and areas where your child may need more help. There are also resources you can use to find activities to support your child’s learning at home.</p>
                 </div>
             </div>
-            <div :hidden="!isOpen" class="p-6 bg-green-100">
-                {{ question.qa.answer }}
-            </div>
         </div>
-    {% endfor %}
-    </div>
+        {{ component('abstract-bg', {
+            fillColor: '#0074A5',
+            classes: 'absolute z-10 top-0 left-0 w-full h-full'
+        }) }}
+    </header>
+
+    {% if questions %}
+    <section class="bg-white py-24">
+        <div class="container px-6">
+            <header class="mb-6 max-w-3xl mx-auto">
+                {{- component('titlebar', {
+                    pretitle: {
+                        text: 'What should your child know?',
+                        classes: 'text-brand_blue'
+                    },
+                    title: {
+                        text: 'Sample Test Questions',
+                        classes: 'text-brand_blue'
+                    },
+                    subtitle: {
+                        text: 'Here are sample test questions that show the skills and concepts students should know and understand in ' + gradeName + '.',
+                        classes: 'text-brand_darkgrey'
+                    }
+                }) -}}
+            </header>
+
+            {{ component('questions-browser', {
+                questions: questions
+            }) }}
+        </div>
+    </section>
     {% endif %}
-</div>
-</div>
-{% endif %}
+
+    <aside class="md:fixed bottom-0 z-50 w-full bg-white border-brand_lightgrey border-t border-b md:shadow-2xl">
+        <div class="max-w-5xl mx-auto">
+            <h1 class="hidden">Explore Test Questions</h1>
+        </div>
+        <div class="container">
+            {{ component('filterbar', {
+                data: {
+                    subject: subject,
+                    grade: grade,
+                    area: area
+                },
+                appearance: 'horizontal',
+                submitText: 'Search'
+            }) }}
+        </div>
+    </aside>
+
+    {% include 'blocks/next-conference-guide.html' %}
+    {% include 'blocks/free-resources.html' %}
+</article>

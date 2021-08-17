@@ -1,0 +1,22 @@
+{%- from "system/component.html" import component -%} 
+<section class="relative py-16 md:py-24 bg-white text-brand_darkgrey bg-line-sphere bg-no-repeat bg-right-bottom-over">
+    <div class="container max-w-4xl mb-12">
+        {{ component('titlebar', {
+            pretitle: {
+                text: 'What should your child know?',
+                classes: 'text-brand_blue'
+            },
+            title: {
+                text: 'Understanding the Score Reports and Areas',
+                classes: 'text-brand_blue'
+            },
+            subtitle: {
+                text: 'It is natural for every student to have academic strengths as well as areas where they may need more support and improvement. The tests your child takes are meant to measure the most important skills in each subject. The 2021 ELA and math tests were shorter, and with fewer questions, the scores could not be broken down into different performance areas. Students will only receive an overall score in each subject.'
+            }
+        }) }}
+    </div>
+    <div class="container max-w-4xl">
+        {% include 'partials/sample-scores.html' %}
+    </div>
+    <img src="/static/img/yellow_natural-dots.svg" alt="" width="300" class="hidden md:block absolute z-30 -top-44 left-0">
+</section>

@@ -3,13 +3,19 @@ layout: default
 container: true
 title: Default Title
 ---
+{%- from "system/component.html" import component -%}
+<div class="relative bg-brand_lightblue text-white">
+    <div class="relative z-20 container px-6 py-14">
+        <h1 class="text-5xl font-bold mb-0 {{ titleClasses }}">{{ title }}</h1>
+    </div>
+    {{ component('abstract-bg', {
+        fillColor: '#0074A5',
+        classes: 'absolute z-10 top-0 left-0 w-full h-full'
+    }) }}
+</div>
 {% if container %}
-<div class="container px-6">
+<div class="container px-6 py-14">
 {% endif %}
-    {% include 'partials/filterBar.html' %}
-    
-    <h1 class="text-5xl font-bold mb-10">{{ title }}</h1>
-
     {{ content | safe }}
 {% if container %}
 </div>

@@ -1,0 +1,27 @@
+{%- from "system/component.html" import component -%} 
+<section class="relative py-16 bg-brand_light-yellow bg-hero-abstract text-center md:text-left">
+    <div class="container">
+        <div class="relative z-40 grid md:grid-cols-2 gap-default">
+            <div class="flex flex-col justify-center">
+                <h1 class="text-5xl">Starting Smarter</h1>
+                <p class="text-xl">Family and school partnerships are key to your child’s success. Given the disruptions to learning over the past year, it is more important than ever for you to have a complete picture of where your child is academically and how the pandemic impacted their learning.</p>
+                <p>{{ component('button', {
+                    url: '#test-questions',
+                    text: 'Explore Test Questions'
+                }) }}</p>
+            </div>
+            <div>
+                {% image { 
+                    src: "./src/static/img/hero-illustration.png", 
+                    alt: "", 
+                    cls: "",
+                    styleName: "medium_half"
+                } %}
+            </div>
+        </div>
+    </div>
+    {{ component('abstract-bg', {
+        fillColor: '#FFE9A9',
+        classes: 'absolute z-10 top-0 left-0 w-full h-full'
+    }) }}
+</section>

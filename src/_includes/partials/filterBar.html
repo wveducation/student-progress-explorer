@@ -1,6 +1,6 @@
-<div class="overflow-hidden max-w-3xl mx-auto mb-10 border border-black border-opacity-40 rounded-full">
+<div class="overflow-hidden mx-auto bg-white border border-black border-opacity-20 rounded-xl">
   <form 
-  class="grid grid-cols-4 gap-4" 
+  class="block" 
   x-data="{
     selection: {
       subject: '{{subject}}' || null,
@@ -13,8 +13,7 @@
   x-on:submit="location = `${data[selection.subject].grades[selection.grade].areas[selection.area].url}`; " 
   @submit.prevent
   >
-  
-    <select class="p-4" x-model="selection.subject" @change="selection.grade = null; selection.area = null;">
+    <select class="p-4 md:my-2 w-full sm:border-b md:border-b-0" x-model="selection.subject" @change="selection.grade = null; selection.area = null;">
       <option hidden>select subject</option>
       <template 
         x-for="[id, value] in Object.entries(data)" 
@@ -23,7 +22,7 @@
       </template>
     </select>
 
-    <select class="p-4" x-model="selection.grade" @change="selection.area = null;">
+    <select class="p-4 md:my-2 w-full sm:border-b md:border-b-0" x-model="selection.grade" @change="selection.area = null;">
       <option hidden>select grade</option>
       <template 
         x-if="data[selection.subject] != null" 
@@ -33,7 +32,7 @@
       </template>
     </select>
 
-    <select class="p-4" x-model="selection.area">
+    <select class="p-4 md:my-2 w-full md:flex-grow" x-model="selection.area">
       <option hidden>select area</option>
       <template 
         x-if="data[selection.subject].grades[selection.grade] != null" 
@@ -43,6 +42,6 @@
       </template>
     </select>
 
-    <input type="submit" class="bg-blue-400 text-white cursor-pointer" />
+    <input type="submit" class="block md:inline-block flex-shrink w-full bg-blue-600 text-white cursor-pointer md:ml-4 px-6 py-4" />
   </form>
 </div>
