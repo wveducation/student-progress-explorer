@@ -7,7 +7,7 @@ description: "Gain a deeper understanding of what your child has mastered and ar
 {% set gradeName %}{%- getItemName collections.grades, grade -%}{% endset %}
 {% set featuredImage %}{%- getSubjectField collections.subjects, subject, 'image' -%}{% endset %}
 <article>
-    <header class="relative py-20 bg-brand_lightblue text-white">
+    <header class="relative py-6 md:py-20 bg-brand_lightblue text-white">
         <div class="container relative z-20">
             <div class="grid md:grid-cols-12 gap-default">
                 <div class="md:row-start-1 md:col-start-7 md:col-end-13">
@@ -29,11 +29,11 @@ description: "Gain a deeper understanding of what your child has mastered and ar
                 </div>
                 <div class="md:row-start-1 md:col-start-1 md:col-end-6 flex flex-col justify-center text-center md:text-left">
                     <h1 class="mb-8">
-                        <div class="text-6xl font-bold mb-2">{{ gradeName }}</div>
-                        <div class="text-2xl font-sans font-normal">{% getItemName collections.subjects, subject %}: {% getItemName collections.areas, area %}</div>
+                        <div class="text-4xl md:text-6xl font-bold mb-2">{{ gradeName }}</div>
+                        <div class="text-xl md:text-2xl font-sans font-normal">{% getItemName collections.subjects, subject %}: {% getItemName collections.areas, area %}</div>
                     </h1>
             
-                    <p class="text-xl">Use the information below to get a deeper understanding of what your child has mastered and areas where your child may need more help. There are also resources you can use to find activities to support your child’s learning at home.</p>
+                    <p class="text-lg md:text-xl">Use the information below to get a deeper understanding of what your child has mastered and areas where your child may need more help. There are also resources you can use to find activities to support your child’s learning at home.</p>
                 </div>
             </div>
         </div>
