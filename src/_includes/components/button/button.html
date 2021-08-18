@@ -3,7 +3,7 @@
     {% case 'light' %}
         {% set themeClasses = defaultButtonClasses + ' bg-white text-brand_lightblue border-2' %}
     {% case 'mobilelink' %}
-        {% set themeClasses = 'px-0 md:px-6 py-0 md:py-3 md:bg-white text-brand_lightblue md:border-2' %}
+        {% set themeClasses = 'px-0 md:px-6 py-0 md:py-3 md:bg-white text-brand_lightblue md:bg-brand_lightblue md:text-white md:hover:bg-brand_lightblue-hover' %}
     {% default %}
         {% set themeClasses = defaultButtonClasses + ' bg-brand_lightblue text-white hover:bg-brand_lightblue-hover' %}
 {% endswitch %}

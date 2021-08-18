@@ -48,12 +48,16 @@ input[type=submit]:hover {
   @apply hover:bg-brand_lightblue-hover;
 }
 
+select:focus {
+  @apply outline-lightblue;
+}
+
 *[disabled] {
   cursor: not-allowed !important;
 }
 
 
-/* Unique Elements */
+/* Questions Container */
 
 .questions-container {
   @apply max-w-5xl mx-auto;

@@ -1,15 +1,16 @@
-{% set default_selectClasses = 'p-4 w-full sm:border-b md:border-b-0' %}
+{% set default_selectClasses = 'p-4 w-full border-0' %}
 {% set default_formClasses = '' %}
 
 {% switch params.appearance %}
   {% case 'horizontal' %}
-      {% set theme_wrapperClasses = 'md:p-4' %}
-      {% set theme_formClasses = 'block md:flex gap-x-4' %}
-      {% set fieldClasses = 'my-2 md:my-0' %}
-    {% default %}
-      {% set theme_wrapperClasses = 'p-4' %}
-      {% set theme_formClasses = 'block' %}
-      {% set theme_selectClasses = 'md:my-2' %}
+    {% set theme_wrapperClasses = 'md:py-4' %}
+    {% set theme_formClasses = 'block md:flex gap-x-4' %}
+    {% set fieldClasses = 'my-2 md:my-0' %}
+    {% set theme_selectClasses = 'bg-offwhite rounded-lg' %}
+  {% default %}
+    {% set theme_wrapperClasses = 'p-4' %}
+    {% set theme_formClasses = 'block' %}
+    {% set theme_selectClasses = 'md:my-2' %}
 {% endswitch %}
 
 {% set wrapperClasses = [theme_wrapperClasses, params.theme_wrapperClasses] | join(" ") %}

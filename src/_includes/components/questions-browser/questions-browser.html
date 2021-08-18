@@ -4,10 +4,8 @@
     x-init="
         $watch('activeTab', function(value) { 
             var elPosition = $el.getBoundingClientRect();
-            if (elPosition.top < 0) {
-                var viewportYOffset = window.scrollY || window.pageYOffset;
-                window.scrollTo({ top: elPosition.top + viewportYOffset }); 
-            }
+            var viewportYOffset = window.scrollY || window.pageYOffset;
+            window.scrollTo({ top: elPosition.top + viewportYOffset }); 
         })"
 >
     {% for question in params.questions %}
@@ -61,7 +59,7 @@
                 <div :class="[ hidden == true ? 'filter blur-md' : '']" class="relative z-0 min-h-question text-lg md:text-2xl font-serif">
                     {{ question.qa.answer }}
                     {% if not loop.last %}
-                    <div class="text-right">
+                    <div class="text-right mt-4">
                         <button @click="activeTab = 'qa_{{ loop.index + 1 }}'" class="text-brand_darkgrey hover:text-brand_lightblue text-loose-caps whitespace-nowrap font-sans">
                             Next Question
                         </button>

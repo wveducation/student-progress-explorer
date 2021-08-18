@@ -65,11 +65,17 @@ module.exports = {
       minHeight: {
         'question': '12rem'
       },
+      outline: {
+        'lightblue': ['#007baf', '2px']
+      },
       width: {
         'header': '80rem'
       }
     }
   },
   variants: {},
-  plugins: [require("@tailwindcss/typography")],
+  plugins: [
+    require("@tailwindcss/typography"),
+    require("@tailwindcss/forms")
+  ],
 };
