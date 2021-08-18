@@ -1,9 +1,14 @@
 {%- from "system/component.html" import component -%} 
 <div x-data="{
     activeTab: ''
-}">
+}" x-init="        
+$watch('activeTab', function(value) { 
+    var elPosition = $el.getBoundingClientRect();
+    var viewportYOffset = window.scrollY || window.pageYOffset;
+    window.scrollTo({ top: elPosition.top + viewportYOffset }); 
+})">
     <h3 class="text-center text-2xl font-bold text-brand_blue mb-6">Select the Sample Score Report You're Looking For:</h3>
-    <div role="tablist" aria-label="Sample Score Reports" class="flex flex-wrap justify-center">
+    <div role="tablist" aria-label="Sample Score Reports" class="flex flex-nowrap justify-start md:justify-center overflow-y-scroll">
         {{ component('icon-toggle', {
             text: 'Science',
             id: 'science',
@@ -24,7 +29,7 @@
         }) }}
     </div>
 
-    <div class="py-12" x-show="activeTab">
+    <div class="py-12" x-show="activeTab" x-cloak>
         <div tabindex="0" role="tabpanel" id="ela" aria-labelledby="ela" x-show="activeTab == 'ela'">
             <div class="grid md:grid-cols-2 gap-6 md:gap-14">
                 <div class="text-center">
