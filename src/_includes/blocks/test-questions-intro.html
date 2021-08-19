@@ -1,9 +1,6 @@
 {%- from "system/component.html" import component -%} 
 <section class="py-16 md:py-24 bg-offwhite border-brand_lightgrey border-t border-b text-brand_darkgrey" id="test-questions">
     <div class="container max-w-3xl text-center">
-        {{ component('button2', {
-            text: 'Hello'
-        }) }}
         {{ component('titlebar', {
             title: {
                 text: 'Check out the Test Questions',
@@ -24,7 +21,11 @@
             } %}
         </div>
         <div class="col-start-4 col-end-6 flex items-center">
-            ddddd
+            {{ component('form-qsearch', {
+                submitText: 'Find Test Questions',
+                theme_wrapperClasses: 'shadow-2xl',
+                theme_selectClasses: 'text-xl'
+            }) }}
         </div>
     </div>
 </section>
