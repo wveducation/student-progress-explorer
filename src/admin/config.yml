@@ -44,6 +44,9 @@ collections:
         value_field: "id"
         search_fields: ["name"]
         display_fields: ["name"]
+      - label: "Description"
+        name: "description"
+        widget: "text"
       - label: "Questions"
         name: "questions"
         widget: "list"

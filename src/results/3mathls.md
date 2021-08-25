@@ -3,6 +3,11 @@ title: "Math: Life Sciences"
 subject: math
 grade: "3"
 area: lifescience
+description: Operations and Algebraic Thinking focuses on understanding and
+  knowing from how to fluently multiply and divide numbers up to 10 x 10, solve
+  word problems using addition, subtraction, multiplication, and division, and
+  to begin to multiply numbers with more than one digit (e.g., multiplying 9 ×
+  80).
 questions:
   - qa:
       question: >-

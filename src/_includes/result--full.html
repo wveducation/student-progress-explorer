@@ -43,6 +43,15 @@ description: "Gain a deeper understanding of what your child has mastered and ar
         }) }}
     </header>
 
+    {% if description %}
+    <section class="py-24 bg-offwhite">
+        <div class="container max-w-3xl text-center">
+            <h1 class="text-3xl text-brand_lightblue">What does my child need to understand and do in this area?</h1>
+            <p class="text-lg md:text-xl">{{ description }}</p>
+        </div>
+    </section>
+    {% endif %}
+
     {% if next_steps %}
     <section class="bg-white py-24">
         <div class="container px-6">
