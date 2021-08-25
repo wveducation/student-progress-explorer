@@ -27,4 +27,15 @@ questions:
 
         Determine whether each statement about the leaf is true. Select True or False for each statement.
       answer: ANSWER TEXT
+next_steps:
+  - instructions: Ask your student to read about a topic and then write a short
+      essay that shares an opinion or explains information about the topic. The
+      writing should be well-organized and include details, facts, linking
+      words, an introduction, and a conclusion. Ask your student to revise and
+      edit the essay.
+  - instructions: Ask your student to read different stories by the same author and
+      compare and contrast the characters, events, and ideas. Have your student
+      retell the stories and explain the characters’ points of view. Ask
+      questions about the stories and direct your student to support the answers
+      with details from the texts.
 ---
