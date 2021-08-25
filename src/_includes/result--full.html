@@ -43,6 +43,33 @@ description: "Gain a deeper understanding of what your child has mastered and ar
         }) }}
     </header>
 
+    {% if next_steps %}
+    <section class="bg-white py-24">
+        <div class="container px-6">
+            <header class="mb-6 max-w-3xl mx-auto">
+                {{- component('titlebar', {
+                    pretitle: {
+                        text: 'Help can I help my child progress?',
+                        classes: 'text-brand_blue'
+                    },
+                    title: {
+                        text: 'Next Steps',
+                        classes: 'text-brand_blue'
+                    },
+                    subtitle: {
+                        text: 'Here are some exercises you can work on at home with your ' + gradeName + ' student.',
+                        classes: 'text-brand_darkgrey'
+                    }
+                }) -}}
+            </header>
+
+            {{ component('next-step-browser', {
+                next_steps: next_steps
+            }) }}
+        </div>
+    </section>
+    {% endif %}
+
     {% if questions %}
     <section class="bg-white py-24">
         <div class="container px-6">

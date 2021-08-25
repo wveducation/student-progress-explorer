@@ -54,6 +54,15 @@ collections:
             fields:
               - { label: "Question", name: "question", widget: "markdown", minimal: true }
               - { label: "Answer", name: "answer", widget: "markdown", minimal: true }
+      - label: "Next Steps"
+        name: "next_steps"
+        widget: "list"
+        fields:
+          - label: "Instructions"
+            name: "instructions"
+            widget: "markdown"
+            fields:
+              - { label: "Instructions", name: "body", widget: "markdown", minimal: true }
 
   - label: "Subject"
     label_plural: 'Subjects'
