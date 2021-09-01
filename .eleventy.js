@@ -78,7 +78,7 @@ module.exports = function(eleventyConfig) {
     // avoids mutating results collection
     let data = [...results];
     // sorts by grade, then subject, then area.
-    return data.sort((a, b) => (a.data.subject.localeCompare(b.data.subject) || a.data.grade - b.data.grade || a.data.area.localeCompare(b.data.area)) );
+    return data.sort((a, b) => (a.data.grade.localeCompare(b.data.grade) || a.data.subject - b.data.subject || a.data.area.localeCompare(b.data.area)) );
   });
 
   eleventyConfig.addShortcode("image", imageShortcode);

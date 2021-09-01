@@ -12,11 +12,11 @@ global_action:
 <div class="max-w-3xl mx-auto">
    <nav class="mb-6">
       <ul class="flex justify-center">
-      {% for subject in collections.subjects | sortByName %}
+      {% for grade in collections.grades | sortByName %}
          <li>
             {{ component('button', {
-               text: subject.data.id,
-               url: "#" + subject.data.id,
+               text: grade.data.name,
+               url: "#" + grade.data.id,
                ariaLabel: ""
             }) }}
          </li>
@@ -25,28 +25,24 @@ global_action:
    </nav>
 
    {% for result in results %}
-      {% set curSubject = result.data.subject %}
-      {% if curSubject != prevGrade %}
-      <div class="mb-6 p-8" id="{{ result.data.subject }}">
-         <h2 class="text-4xl font-bold text-brand_blue text-center">{% getItemName collections.subjects, result.data.subject %}</h2>
+      {% set curGrade = result.data.grade %}
+      {% if curGrade != prevGrade %}
+      <div class="mb-6 p-8" id="{{ result.data.grade }}">
+         <h2 class="text-4xl font-bold text-brand_blue text-center">{% getItemName collections.grades, result.data.grade %}</h2>
          <table class="mx-auto p-6 bg-offwhite border-b">
             <thead>
-               <th class="px-4" align="left">Title</th>
-               <th class="px-4" align="left">Grade</th>
+               <th class="px-4" align="left">Subject</th>
                <th class="px-4" align="left">Area</th>
-               <th class="px-4" align="left">Questions</th>
             </thead>
       {% endif %}
             <tr>
-               <td class="px-4"><a href="{{ result.url }}" class="underline text-brand_lightblue">{{ result.data.title }}</a></td>
-               <td class="px-4">{{ result.data.grade }}</td>
-               <td class="px-4">{{ result.data.area }}</td>
-               <td class="px-4" align="right">{{ 'yes' if result.data.questions else 'no' }}</td>
+               <td class="px-4">{% getItemName collections.subjects, result.data.subject %}</td>
+               <td class="px-4"><a href="{{ result.url }}" class="underline text-brand_lightblue">{% getItemName collections.areas, result.data.area %}</a> {{ '(Q)' if result.data.questions }}</td>
             </tr>
-      {% if curSubject != results[loop.index0 + 1].data.subject %}
+      {% if curGrade != results[loop.index0 + 1].data.grade %}
          </table>
       </div>
       {% endif %}
-      {% set prevGrade = curSubject %}
+      {% set prevGrade = curGrade %}
    {% endfor %}
 </div>
