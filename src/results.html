@@ -29,7 +29,7 @@ global_action:
       {% if curSubject != prevGrade %}
       <div class="mb-6 p-8" id="{{ result.data.subject }}">
          <h2 class="text-4xl font-bold text-brand_blue text-center">{% getItemName collections.subjects, result.data.subject %}</h2>
-         <table class="mx-auto">
+         <table class="mx-auto p-6 bg-offwhite border-b">
             <thead>
                <th class="px-4" align="left">Title</th>
                <th class="px-4" align="left">Grade</th>
@@ -38,7 +38,7 @@ global_action:
             </thead>
       {% endif %}
             <tr>
-               <td class="px-4"><a href="{{ result.url }}" class="underline">{{ result.data.title }}</a></td>
+               <td class="px-4"><a href="{{ result.url }}" class="underline text-brand_lightblue">{{ result.data.title }}</a></td>
                <td class="px-4">{{ result.data.grade }}</td>
                <td class="px-4">{{ result.data.area }}</td>
                <td class="px-4" align="right">{{ 'yes' if result.data.questions else 'no' }}</td>
