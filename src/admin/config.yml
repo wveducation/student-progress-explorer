@@ -12,6 +12,15 @@ public_folder: "/static/img"
 local_backend: true
 # publish_mode: editorial_workflow
 collections:
+  - label: "Post"
+    label_plural: "Posts"
+    name: "post"
+    folder: "src/posts"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Subtitle", name: "subtitle", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
 
   - label: "Result"
     label_plural: "Results"
@@ -122,3 +131,4 @@ collections:
           - { label: Name, name: name, widget: string }
           - { label: Author, name: author, widget: string }
           - { label: URL, name: url, widget: string }
+          - { label: Organization, name: organization, widget: string }
