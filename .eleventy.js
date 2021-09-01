@@ -107,31 +107,31 @@ module.exports = function(eleventyConfig) {
     return items[0].data[fieldName];
   });
 
-  eleventyConfig.addShortcode("subjectTree", (results, subjects, grades, areas) => {
+  eleventyConfig.addShortcode("subjectTree", (results, grades, subjects, areas) => {
     const tree = {};
 
     // Make a list of subjects which are used in any results.
     results.forEach(result => {
 
       // if the tree doesn't yet have this result's subject, add it
-      if (!(tree.hasOwnProperty(result.data.subject))) {
-        tree[result.data.subject] = {
-          "name": getNameById(subjects, result.data.subject),
-          "grades": {}
+      if (!(tree.hasOwnProperty(result.data.grade))) {
+        tree[result.data.grade] = {
+          "name": getNameById(grades, result.data.grade),
+          "subjects": {}
         };
       }
 
       // if this subject id branch doesn't have this grade yet, add it
-      if (!(tree[result.data.subject]['grades'].hasOwnProperty(result.data.grade))) {
-        tree[result.data.subject]['grades'][result.data.grade] = {
-          "name": getNameById(grades, result.data.grade),
+      if (!(tree[result.data.grade]['subjects'].hasOwnProperty(result.data.subject))) {
+        tree[result.data.grade]['subjects'][result.data.subject] = {
+          "name": getNameById(subjects, result.data.subject),
           "areas": {}
         };
       }
 
       // if this subject and grade branch doesn't have this area yet, add it
-      if (!(tree[result.data.subject]['grades'][result.data.grade]['areas'].hasOwnProperty(result.data.area))) {
-        tree[result.data.subject]['grades'][result.data.grade]['areas'][result.data.area] = {
+      if (!(tree[result.data.grade]['subjects'][result.data.subject]['areas'].hasOwnProperty(result.data.area))) {
+        tree[result.data.grade]['subjects'][result.data.subject]['areas'][result.data.area] = {
           "name": getNameById(areas, result.data.area),
           "url": result.url
         };
