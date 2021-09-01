@@ -56,6 +56,30 @@ select:focus {
   cursor: not-allowed !important;
 }
 
+/* Markdown Field styles */
+
+.markdown-field h1, 
+.markdown-field h2, 
+.markdown-field h3, 
+.markdown-field h4 {
+  @apply text-brand_lightblue mt-6;
+}
+
+.markdown-field h2 {
+  @apply text-3xl;
+}
+
+.markdown-field h2 {
+  @apply text-3xl;
+}
+
+.markdown-field a {
+  @apply bg-brand_light-yellow;
+}
+
+.markdown-field img {
+  display: inline-block;
+}
 
 /* Questions Container */
 
