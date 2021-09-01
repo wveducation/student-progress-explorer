@@ -22,8 +22,8 @@
   x-cloak
   x-data="{
     selection: {
-      subject: '{{ params.data.subject }}' || null,
       grade: '{{ params.data.grade }}' || null,
+      subject: '{{ params.data.subject }}' || null,
       area: '{{ params.data.area }}' || null,
     },
     readyToSubmit: true,
@@ -34,42 +34,42 @@
     .then(function(response) { return response.json(); })
     .then(function(response) { data = response; });
   "
-  x-on:submit="location = `${data[selection.subject].grades[selection.grade].areas[selection.area].url}`; " 
+  x-on:submit="location = `${data[selection.grade].subjects[selection.subject].areas[selection.area].url}`; " 
   @submit.prevent
   >
-    <select class="{{ fieldClasses }} {{ selectClasses }}" x-model="selection.subject" @change="selection.grade = null; selection.area = null;">
-      <option>Choose Subject</option>
+    <select class="{{ fieldClasses }} {{ selectClasses }}" x-model="selection.grade" @change="selection.subject = null; selection.area = null;">
+      <option>Choose Grade</option>
       <template 
         x-for="[id, value] in Object.entries(data)" 
         :key="id">
-        <option :value="id" :selected="id == selection.subject" x-text="value.name"></option>
+        <option :value="id" :selected="id == selection.grade" x-text="value.name"></option>
       </template>
     </select>
 
-    <select class="{{ fieldClasses }} {{ selectClasses }}" x-model="selection.grade" @change="selection.area = null;" :disabled="!selection.subject">
-      <option>Choose Grade</option>
+    <select class="{{ fieldClasses }} {{ selectClasses }}" x-model="selection.subject" @change="selection.area = null;" :disabled="!selection.grade">
+      <option>Choose Subject</option>
       <template
-        x-if="selection.subject !== null">
+        x-if="selection.grade !== null">
         <template 
-          x-for="[id, value] in Object.entries(data[selection.subject].grades)" 
+          x-for="[id, value] in Object.entries(data[selection.grade].subjects)" 
           :key="id">
-          <option :value="id" :selected="id == selection.grade" x-text="value.name"></option>
+          <option :value="id" :selected="id == selection.subject" x-text="value.name"></option>
         </template>
       </template>
     </select>
 
-    <select class="{{ fieldClasses }} {{ selectClasses }}" x-model="selection.area" :disabled="!selection.grade">
+    <select class="{{ fieldClasses }} {{ selectClasses }}" x-model="selection.area" :disabled="!selection.subject">
       <option>Choose Area</option>
       <template
-        x-if="selection.grade !== null">
+        x-if="selection.subject !== null">
         <template 
-          x-for="[id, value] in Object.entries(data[selection.subject].grades[selection.grade].areas) || []" 
+          x-for="[id, value] in Object.entries(data[selection.grade].subjects[selection.subject].areas) || []" 
           :key="id">
           <option :value="id" :selected="id == selection.area" x-text="value.name"></option>
         </template>
       </template>
     </select>
 
-    <input type="submit" value="{{ params.submitText if params.submitText else 'Submit' }}" :disabled="!selection.subject && !selection.grade && !selection.area" class="{{ fieldClasses }} block md:inline-block flex-shrink w-full" />
+    <input type="submit" value="{{ params.submitText if params.submitText else 'Submit' }}" :disabled="!selection.grade && !selection.subject && !selection.area" class="{{ fieldClasses }} block md:inline-block flex-shrink w-full" />
   </form>
 </div>
