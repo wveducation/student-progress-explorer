@@ -9,7 +9,7 @@ global_action:
 ---
 {%- from "system/component.html" import component -%}
 {% set results = collections.results | sortResultsDirectory %}
-<div class="max-w-3xl mx-auto">
+<div class="max-w-xl mx-auto">
    <nav class="mb-6">
       <ul class="flex justify-center">
       {% for grade in collections.grades | sortByName %}
@@ -26,23 +26,27 @@ global_action:
 
    {% for result in results %}
       {% set curGrade = result.data.grade %}
+      {% set curSubject = result.data.subject %}
       {% if curGrade != prevGrade %}
-      <div class="mb-6 p-8" id="{{ result.data.grade }}">
-         <h2 class="text-4xl font-bold text-brand_blue text-center">{% getItemName collections.grades, result.data.grade %}</h2>
-         <table class="mx-auto p-6 bg-offwhite border-b">
-            <thead>
-               <th class="px-4" align="left">Subject</th>
-               <th class="px-4" align="left">Area</th>
-            </thead>
+      <section class="mb-12" id="{{ result.data.grade }}">
+         <h1 class="text-4xl font-bold text-brand_blue text-left md:text-center">{% getItemName collections.grades, result.data.grade %}</h1>
+         <div class="p-4 border-b bg-offwhite">
       {% endif %}
-            <tr>
-               <td class="px-4">{% getItemName collections.subjects, result.data.subject %}</td>
-               <td class="px-4"><a href="{{ result.url }}" class="underline text-brand_lightblue">{% getItemName collections.areas, result.data.area %}</a> {{ '(Q)' if result.data.questions }}</td>
-            </tr>
+            {% if curGrade != prevGrade %}
+            <div class="grid md:grid-cols-2 gap-x-default">
+            <h2 class="font-sans text-lg font-bold text-brand_blue">{% getItemName collections.subjects, result.data.subject %}</h2>
+            <ul>
+            {% endif %}
+               <li><a href="{{ result.url }}" class="underline text-brand_lightblue">{% getItemName collections.areas, result.data.area %}</a> {{ '(Q)' if result.data.questions }}</li>
+            {% if curGrade != prevGrade and loop.first %}
+            </ul>
+            </div>
+            {% endif %}
       {% if curGrade != results[loop.index0 + 1].data.grade %}
-         </table>
-      </div>
+         </div>
+      </section>
       {% endif %}
       {% set prevGrade = curGrade %}
+      {% set prevSubject = curSubject %}
    {% endfor %}
 </div>
