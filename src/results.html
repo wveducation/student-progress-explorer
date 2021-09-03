@@ -10,7 +10,7 @@ global_action:
 {%- from "system/component.html" import component -%}
 {% set results = collections.results | sortResultsDirectory %}
 <div class="max-w-xl mx-auto">
-   <aside class="mb-20 text-center">
+   <aside class="mb-20 text-center" id="skip-to-grade">
       <h1 class="font-sans font-normal text-loose-caps">Skip to grade</h1>
       <nav class="flex flex-col items-center mb-6">
          <ul class="flex flex-wrap justify-center p-1 rounded-full bg-white border border-brand_lightgrey">
@@ -56,6 +56,10 @@ global_action:
 
       {% if curGrade != results[loop.index0 + 1].data.grade %}
          </div>
+
+         <footer class="text-right pt-2">
+            <a href="#skip-to-grade" class="text-loose-caps text-brand_grey opacity-30">Back to Top</a>
+         </footer>
       </section>
       {% endif %}
 
