@@ -26,7 +26,7 @@ const argv = yargs
         alias: 'f',
         description: 'Define the exported filename template for exports.',
         type: 'string',
-        default: '${post.grade + post.subject + post.area}.md'
+        default: '${post.gradeID + post.subjectID + post.areaID}.md'
     })
     .help()
     .alias('help', 'h')
@@ -36,9 +36,10 @@ const getMarkdownPath = post => `./${argv.destination}/${eval('`'+argv.filename+
 
 const renderMarkdown = post => `---
 title: "${post.title}"
-subject: "${post.subject}"
-grade: "${post.grade}"
-area: "${post.area}"
+subject: "${post.subjectID}"
+grade: "${post.gradeID}"
+area: "${post.areaID}"
+${renderSteps(post)}
 ${renderQuestions(post)}
 ---`;
 
@@ -48,26 +49,32 @@ const renderQuestions = (post, index) => {
     let qastring = '';
     
     qaKeys.forEach((qaKey, i) => {
-        
-        if (i == 0) {
-            qastring += `questions:`;
-        }
-
-        if (i % 2 == 0) {
-            qastring += `\n  - qa:`;
-        }
-
-        if (qaKey[0] == 'q') {
-            qastring += `\n      question: ${ post[qaKey] }`;
-        }
-        
-        if (qaKey[0] == 'a') {
-            qastring += `\n      answer: ${ post[qaKey] }`;
-        }
+        if (!post[qaKey]) { return false; }
+        if (i == 0) {               qastring += `questions:`; }
+        if (i % 2 == 0) {           qastring += `\n  - qa:`; }
+        if (qaKey[0] == 'q') {      qastring += `\n      question: "${ post[qaKey] }"`; }
+        if (qaKey[0] == 'a') {      qastring += `\n      answer: "${ post[qaKey] }"`; }
     });
 
     output += qastring;
 
+    return output;
+};
+
+const renderSteps = (post, index) => {
+    // matches string of "step" with any number of preceeding integers. (e.g. step1, step12 - not step4a)
+    let stepKeys = Object.keys(post).filter(key => key.match(/(?:^step[0-9]+$)/) );
+    let output = '';
+    let stepString = '';
+
+    stepKeys.forEach((stepKey, i) => {
+        if (i == 0) { stepString += `next_steps:`; }
+        if (post[stepKey]) {
+            stepString += `\n - instructions: "${ post[stepKey] }"`;
+        }
+    });
+
+    output += stepString;
     return output;
 };
 
