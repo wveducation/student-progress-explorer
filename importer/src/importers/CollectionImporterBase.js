@@ -1,6 +1,6 @@
 "use strict";
 
-const { writeFile } = require("fs-extra");
+const { writeFile, mkdirp } = require("fs-extra");
 const chalk = require('chalk');
 
 class CollectionImporterBase {
@@ -13,10 +13,15 @@ class CollectionImporterBase {
     }
 
     render() {
-        return '';
+        throw new Error(
+            chalk.red(`${this.constructor.name} should implement a render method.`)
+        );
     }
 
     writeFile() {
+
+        // Ensure directory exists for filePath before writing to it.
+        mkdirp(`${process.cwd()}/${this.filePathDir}`);
 
         writeFile(this.filePath, this.render(), error => {
             if (error) throw new Error(

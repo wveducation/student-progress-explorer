@@ -8,11 +8,12 @@ const dedent = require("dedent");
 const chalk = require('chalk');
 const path = require('path');
 const { areRangesOverlapping } = require('date-fns');
-const wrapText = require(path.resolve( __dirname,'./wrapText.js'));
-const ResultImporter = require('./ResultImporter.js');
-const GradeImporter = require('./GradeImporter');
-const SubjectImporter = require('./SubjectImporter');
-const AreaImporter = require('./AreaImporter');
+const wrapText = require(path.resolve( __dirname,'./util/wrapText.js'));
+const ResultImporter = require('./importers/ResultImporter.js');
+const GradeImporter = require('./importers/GradeImporter');
+const SubjectImporter = require('./importers/SubjectImporter');
+const AreaImporter = require('./importers/AreaImporter');
+const TestImporter = require('./importers/TestImporter');
 
 const argv = yargs
     .option('source', {
@@ -20,18 +21,6 @@ const argv = yargs
         description: 'Define the source CSV file for the import.',
         type: 'string',
         default: 'data/data.csv',
-    })
-    .option('destination', {
-        alias: 'd',
-        description: 'Define the folder destination for the output.',
-        type: 'string',
-        default: 'imported-data',
-    })
-    .option('filename', {
-        alias: 'f',
-        description: 'Define the exported filename template for exports.',
-        type: 'string',
-        default: '${row.gradeID + row.subjectID + row.areaID}.md'
     })
     .option('clean', {
         alias: 'c',
@@ -49,8 +38,9 @@ const parser = parse({ columns: true }, (error, rows) => {
     if (error) throw new Error(chalk.red(error));
     if (!Array.isArray(rows)) throw new Error("❌ Incorrect CSV format");
 
-    // Create the destination directory
-    mkdirp(`${process.cwd()}/${argv.destination}`);
+    // Create the destination directory. 
+    // @todo Move to Importers
+    // mkdirp(`${process.cwd()}/${argv.destination}`);
 
     let grades = [];
     let subjects = [];
