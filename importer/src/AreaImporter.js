@@ -11,6 +11,7 @@ class AreaImporter extends CollectionBase {
             filePathDir: filePathDir,
             fileName: fileName
         });
+        this.type = "Area";
     }
 
     render() {
