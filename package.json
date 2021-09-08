@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "autoprefixer": "^10.1.0",
+    "common-tags": "^1.8.0",
     "eleventy-plugin-svg-contents": "^0.7.0",
     "postcss": "^8.2.1"
   }
