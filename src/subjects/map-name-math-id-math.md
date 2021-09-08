@@ -1,4 +1,0 @@
----
-name: Math
-id: math
----
