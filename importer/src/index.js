@@ -35,7 +35,8 @@ const stream = createReadStream(process.cwd()+'/'+argv.source);
 const parser = parse({ columns: true }, (error, rows) => {
     if (error) throw new Error(chalk.red(error));
     if (!Array.isArray(rows)) throw new Error("❌ Incorrect CSV format");
-
+    
+    let results = [];
     let grades = [];
     let subjects = [];
     let areas = [];
@@ -72,6 +73,7 @@ const parser = parse({ columns: true }, (error, rows) => {
 
     rows.filter(row => row.title !== '').forEach(row => {
 
+        results[row.slug] = row.slug;
         let result = new ResultImporter({ 
             data: row,
             filePathDir: importDir.results,
@@ -114,3 +116,12 @@ const parser = parse({ columns: true }, (error, rows) => {
 });
 
 stream.pipe(parser);
+
+console.info(chalk.green(`
+Import Summary
+--
+    Results: ${results.length}
+    Grades: ${grades.length}
+    Subjects: ${subjects.length}
+    Areas: ${areas.length}
+`));
