@@ -116,12 +116,3 @@ const parser = parse({ columns: true }, (error, rows) => {
 });
 
 stream.pipe(parser);
-
-console.info(chalk.green(`
-Import Summary
---
-    Results: ${results.length}
-    Grades: ${grades.length}
-    Subjects: ${subjects.length}
-    Areas: ${areas.length}
-`));
