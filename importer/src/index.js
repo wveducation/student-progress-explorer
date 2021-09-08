@@ -1,14 +1,12 @@
 const yargs = require('yargs');
-const { createReadStream, writeFile, mkdirp } = require("fs-extra");
-const { mkdir } = require("fs");
+const { createReadStream, emptyDir, remove, removeSync } = require("fs-extra");
+const { mkdir, unlink, readdir, fstat, readdirSync } = require("fs");
 const parse = require("csv-parse");
 const mapKeys = require("lodash/mapKeys");
 const formatDate = require("date-fns/format");
 const dedent = require("dedent");
 const chalk = require('chalk');
 const path = require('path');
-const { areRangesOverlapping } = require('date-fns');
-const wrapText = require(path.resolve( __dirname,'./util/wrapText.js'));
 const ResultImporter = require('./importers/ResultImporter.js');
 const GradeImporter = require('./importers/GradeImporter');
 const SubjectImporter = require('./importers/SubjectImporter');
@@ -38,19 +36,45 @@ const parser = parse({ columns: true }, (error, rows) => {
     if (error) throw new Error(chalk.red(error));
     if (!Array.isArray(rows)) throw new Error("❌ Incorrect CSV format");
 
-    // Create the destination directory. 
-    // @todo Move to Importers
-    // mkdirp(`${process.cwd()}/${argv.destination}`);
-
     let grades = [];
     let subjects = [];
     let areas = [];
 
-    rows.forEach(row => {
+    let importDir = {
+        results: 'src/results',
+        grades: 'src/grades',
+        subjects: 'src/subjects',
+        areas: 'src/areas'
+    };
+
+    // If clean arg passed, clean all markdown files from all import directories
+    function cleanImportDirectories() {
+
+        Object.entries(importDir).forEach(([key, dir]) => {
+            let filenames = readdirSync(dir);
+            filenames
+                .filter(filename => path.extname(filename).toLowerCase() === '.md')
+                .forEach((filename, index) => {                    
+                    try {
+                        removeSync(`./${dir}/${filename}`);
+                    } catch (err) {
+                        console.log(err);
+                    }
+                });
+        });
+    }
+
+    if (argv.clean) {
+        console.log(chalk.green('🗑 Cleaning markdown files from import directories.'));
+
+        cleanImportDirectories();
+    }
+
+    rows.filter(row => row.title !== '').forEach(row => {
 
         let result = new ResultImporter({ 
             data: row,
-            filePathDir: 'src/results',
+            filePathDir: importDir.results,
             fileName: `${row.gradeID + row.subjectID + row.areaID}.md`
         });
         result.writeFile();
@@ -59,7 +83,7 @@ const parser = parse({ columns: true }, (error, rows) => {
             grades[row.gradeID] = row.gradeID;
             let grade = new GradeImporter({
                 data: row,
-                filePathDir: 'src/grades',
+                filePathDir: importDir.grades,
                 fileName: `${row.gradeID}.md`
             });
             grade.writeFile();
@@ -69,7 +93,7 @@ const parser = parse({ columns: true }, (error, rows) => {
             subjects[row.subjectID] = row.subjectID;
             let subject = new SubjectImporter({
                 data: row,
-                filePathDir: 'src/subjects',
+                filePathDir: importDir.subjects,
                 fileName: `${row.subjectID}.md`
             });
             subject.writeFile();
@@ -79,7 +103,7 @@ const parser = parse({ columns: true }, (error, rows) => {
             areas[row.areaID] = row.areaID;
             let area = new AreaImporter({
                 data: row,
-                filePathDir: 'src/areas',
+                filePathDir: importDir.areas,
                 fileName: `${row.areaID}.md`
             });
             area.writeFile();
