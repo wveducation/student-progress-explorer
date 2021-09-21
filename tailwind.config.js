@@ -15,6 +15,9 @@ module.exports = {
       'serif': ["Vollkorn", "sans-serif"],
       'sans': ["Fira Sans", "sans-serif"]
     },
+    scale: {
+      '1025': '1.025'
+    },
     screens: {
       'sm': '640px',
       'md': '768px',
@@ -73,7 +76,11 @@ module.exports = {
       }
     }
   },
-  variants: {},
+  variants: {
+    extend: {
+      contrast: ['hover']
+    }
+  },
   plugins: [
     require("@tailwindcss/typography"),
     require("@tailwindcss/forms")
