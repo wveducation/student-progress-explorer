@@ -1,11 +1,10 @@
 ---
-title: "Grade Grade 5 / Math / Operations and Algebraic Thinking"
+title: "Grade 5 / Math / Operations and Algebraic Thinking"
 subject: "math"
 grade: "5"
 area: "oat"
 next_steps:
-  - instructions: "With your student, compare two different numerical sequences, write the rule used to create each sequence, and explain any apparent relationships between the corresponding terms of sequences. "
-  - instructions: "With your student, solve real-world story problems using variables while your student asks questions. Is my strategy working? Is my strategy generalizable? Does my answer make sense? "
-  - instructions: "With your student, draw irregular polygons on graph paper. Discuss how to decompose the polygon into triangles to find the area. Create data sets for your student to display using box plots. "
-  - instructions: "With your student, solve multi-step problems using different mathematical models and discuss the advantages of each model. ∙With your student, discuss complex problems that were solved incorrectly. Develop explanations for better solution paths."
+  - instructions: "With your student, create and interpret numerical expressions for calculations. For example, 7 x (9 – 5) means “the product of 7 and the difference between 9 and 5.” or “7 times the difference between 9 and 5.”"
+  - instructions: "With your student, generate two numerical patterns using different rules; for example, “Add 3” and “Multiply by 2.” Compare the patterns, and look for relationships between the corresponding terms."
+  - instructions: "With your student, compare two different numerical sequences, write the rule used to create each sequence, and explain any apparent relationships between the corresponding terms of sequences."
 ---

@@ -1,10 +1,10 @@
 ---
-title: "Grade Grade 4 / English Learning Arts / Reading Literary Text"
+title: "Grade 4 / English Learning Arts / Reading Literary Text"
 subject: "ela"
 grade: "4"
 area: "rlt"
 next_steps:
-  - instructions: "Ask your student to read stories from different cultures about the same topic or theme and compare and contrast their treatment of these ideas. Ask your student to explain how the events and characters help to develop the themes. Ask your student to analyze the points of view used in stories, poems, or plays. "
-  - instructions: "Ask your student to read articles about a topic and then write a short essay that shares an opinion or explains information about the topic. The writing should be well organized and the topic should be fully developed with detail from the texts. Ask your student to revise and edit the essay. "
-  - instructions: "Ask your student to read articles about a topic and explain how events and ideas are communicated. Discuss how people, events, and ideas interact in the texts. Have him or her contrast the authors’ points of view, organizational styles, and purposes."
+  - instructions: "Ask your student to read stories and to describe their characters, events, and themes. Have your student read poems and plays and describe how they are organized. Ask your student to compare stories on the same topics or themes."
+  - instructions: "Ask your student to read stories and to describe their characters, settings, and events in depth. Ask your student about the narrator’s point of view and how it affects the story. Have your student describe how plays and poems are organized. Ask your student to compare and contrast traditional stories."
+  - instructions: "Ask your student to read stories from different cultures about the same topic or theme and compare and contrast their treatment of these ideas. Ask your student to explain how the events and characters help to develop the themes. Ask your student to analyze the points of view used in stories, poems, or plays."
 ---

@@ -1,10 +1,10 @@
 ---
-title: "Grade Grade 4 / English Learning Arts / Reading Informational Text"
+title: "Grade 4 / English Learning Arts / Reading Informational Text"
 subject: "ela"
 grade: "4"
 area: "rit"
 next_steps:
-  - instructions: "Ask your student to read stories from different cultures about the same topic or theme and compare and contrast their treatment of these ideas. Ask your student to explain how the events and characters help to develop the themes. Ask your student to analyze the points of view used in stories, poems, or plays. "
-  - instructions: "Ask your student to read articles about a topic and then write a short essay that shares an opinion or explains information about the topic. The writing should be well organized and the topic should be fully developed with detail from the texts. Ask your student to revise and edit the essay. "
-  - instructions: "Ask your student to read articles about a topic and explain how events and ideas are communicated. Discuss how people, events, and ideas interact in the texts. Have him or her contrast the authors’ points of view, organizational styles, and purposes."
+  - instructions: "Ask your student to read articles and to describe the people, events, or ideas from the articles using details from the texts. Discuss the main ideas and the connections between ideas. Ask your student to tell you about the organization of the text and the author’s point of view."
+  - instructions: "Ask your student to read several articles about a topic and to compare and contrast the ideas, organization, and points of view of the texts. Ask your student how charts, pictures, or diagrams help to explain the topic."
+  - instructions: "Ask your student to read several texts about a topic and to compare and contrast the ideas, organization, and points of view. Ask your student to determine the evidence that supports each author’s ideas and how charts, pictures, or diagrams supplement the information."
 ---

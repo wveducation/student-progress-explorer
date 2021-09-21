@@ -1,12 +1,10 @@
 ---
-title: "Grade Grade 4 / Math / Numbers and Operations - Base Ten and Fractions"
+title: "Grade 4 / Math / Numbers and Operations - Base Ten and Fractions"
 subject: "math"
 grade: "4"
 area: "nobtf"
 next_steps:
-  - instructions: "With your student, create 5 squares, 1-by-1 to 5-by-5, and write the area on each square. Look for patterns in the areas and discuss how multiplication can help compute areas. "
-  - instructions: "With your student, use various tools to measure ingredients for recipes. Practice converting measurements, like quarts to cups. Discuss how to halve a recipe using equivalent fractions. "
-  - instructions: "With your student, create and solve word problems. Discuss what the problem is asking and whether more information is needed. Choose a strategy (picture, diagram, table of values) to solve. "
-  - instructions: "With your student, cut one paper plate into 4 equal parts and another into 6 equal parts. Discuss how pieces from each circle can be divided further so each circle has the same-sized pieces. "
-  - instructions: "With your student, create and solve addition and subtraction problems involving fractions with different denominators. Discuss different methods for finding a common denominator."
+  - instructions: "With your student, use coin values to show decimals (one cent would be 0.01) and use money to add or subtract numbers with more than one digit."
+  - instructions: "With your student, use quarters, dimes, nickels, and pennies to practice converting between decimals and fractions. For example, there are 10 dimes in $1, and 8 dimes = $0.80, so 8/10 = 0.80."
+  - instructions: "With your student, use coins to convert between decimals and fractions; for example, 3 quarters = $0.75, so 3/4 = 0.75. Use this reasoning to compare fractions like 3/4 and 8/10 using decimals."
 ---

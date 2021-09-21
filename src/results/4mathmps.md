@@ -1,12 +1,10 @@
 ---
-title: "Grade Grade 4 / Math / Modeling and Problem Solving"
+title: "Grade 4 / Math / Modeling and Problem Solving"
 subject: "math"
 grade: "4"
 area: "mps"
 next_steps:
-  - instructions: "With your student, create 5 squares, 1-by-1 to 5-by-5, and write the area on each square. Look for patterns in the areas and discuss how multiplication can help compute areas. "
-  - instructions: "With your student, use various tools to measure ingredients for recipes. Practice converting measurements, like quarts to cups. Discuss how to halve a recipe using equivalent fractions. "
-  - instructions: "With your student, create and solve word problems. Discuss what the problem is asking and whether more information is needed. Choose a strategy (picture, diagram, table of values) to solve. "
-  - instructions: "With your student, cut one paper plate into 4 equal parts and another into 6 equal parts. Discuss how pieces from each circle can be divided further so each circle has the same-sized pieces. "
-  - instructions: "With your student, create and solve addition and subtraction problems involving fractions with different denominators. Discuss different methods for finding a common denominator."
+  - instructions: "With your student, divide objects into groups of equal amounts. Note that some numbers (composite) can divided many ways, while other numbers (prime) can only be divided by 1 and themselves."
+  - instructions: "With your student, create and solve multi-step word problems. For example, Anita had $26, she spent $8, then loaned half of her remaining money to her brother; how much money does she have left? [1/2 (26 – 8) = 9]"
+  - instructions: "With your student, estimate answers to word problems by rounding. Discuss what level of rounding is appropriate (for example, to the nearest dollar or nearest 10 dollars)."
 ---

@@ -1,11 +1,10 @@
 ---
-title: "Grade Grade 5 / Math / Modeling and Problem Solving"
+title: "Grade 5 / Math / Modeling and Problem Solving"
 subject: "math"
 grade: "5"
 area: "mps"
 next_steps:
-  - instructions: "With your student, compare two different numerical sequences, write the rule used to create each sequence, and explain any apparent relationships between the corresponding terms of sequences. "
-  - instructions: "With your student, solve real-world story problems using variables while your student asks questions. Is my strategy working? Is my strategy generalizable? Does my answer make sense? "
-  - instructions: "With your student, draw irregular polygons on graph paper. Discuss how to decompose the polygon into triangles to find the area. Create data sets for your student to display using box plots. "
-  - instructions: "With your student, solve multi-step problems using different mathematical models and discuss the advantages of each model. ∙With your student, discuss complex problems that were solved incorrectly. Develop explanations for better solution paths."
+  - instructions: "With your student, practice solving multi-digit addition and subtraction word problems using strategies such as drawing a picture or diagram, or making a table."
+  - instructions: "With your student, discuss what a word problem is asking and whether any more information is needed. Solve using strategies such as drawing a picture or diagram, or making a table."
+  - instructions: "With your student, create and solve word problems. Discuss what the problem is asking and whether more information is needed. Choose a strategy (picture, diagram, table of values) to solve."
 ---

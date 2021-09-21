@@ -1,11 +1,11 @@
 ---
-title: "Grade Grade 6 / Math / Geometry and Statistics and Probability"
+title: "Grade 6 / Math / Geometry and Statistics and Probability"
 subject: "math"
 grade: "6"
 area: "gsp"
 next_steps:
-  - instructions: "With your student, look at the price and the net weight of boxes of cereal. Decide which cereal costs the least per ounce. Find the temperatures of 5 cities (some negative) to analyze on a number line, and examine absolute value as a distance. "
-  - instructions: "With your student, discuss why you would rewrite expressions in different forms; for example, to visualize percentage increases. "
-  - instructions: "With your student, solve multi-step problems with three-dimensional figures; for example, the volume of a cylinder given its height and surface area. "
+  - instructions: "With your student, draw triangles and quadrilaterals and discuss how to find their areas. Create a data set and discuss how to find the data’s mean and median and the differences between them."
+  - instructions: "With your student, sketch nets made of rectangles and triangles to represent household objects and estimate their surface areas. Discuss statistical questions your student could ask classmates."
+  - instructions: "With your student, draw irregular polygons on graph paper. Discuss how to decompose the polygon into triangles to find the area. Create data sets for your student to display using box plots."
   - instructions: "With your student, solve multi-step problems using different mathematical models and discuss the advantages of each model. ∙With your student, discuss complex problems that were solved incorrectly. Develop explanations for better solution paths."
 ---

@@ -1,10 +1,10 @@
 ---
-title: "Grade Grade 5 / English Learning Arts / Reading Informational Text"
+title: "Grade 5 / English Learning Arts / Reading Informational Text"
 subject: "ela"
 grade: "5"
 area: "rit"
 next_steps:
-  - instructions: "Ask your student to read stories and explain how their themes are developed through the characters and the events. Ask your student to describe how the narrators’ points of view affect how the stories are told. Then ask your student to read another story of the same kind and compare the themes and topics. "
-  - instructions: "Ask your student to read articles about a topic and write an essay that supports an opinion or examines a topic. The essay should be logically organized, detailed, and fully supported with information from the articles. Ask your student to revise and edit the essay to develop the ideas and correct any errors. "
-  - instructions: "Ask your student to read different types of informational texts and explain how key events, people, or ideas are introduced and developed. Ask your student to compare texts about the same topic and discuss the authors’ different interpretations, supporting evidence, and ideas."
+  - instructions: "Ask your student to read an article about a topic and find the main ideas and supporting details. Discuss the relationships between ideas or events. Then ask your student to read another article about the topic and contrast the authors’ points of view."
+  - instructions: "Ask your student to read an article about a topic and find the main ideas and supporting details. Then ask your student to explain the relationships between ideas or events. Have him or her read another article about the topic and contrast the authors’ points of view and purposes."
+  - instructions: "Ask your student to read articles about a topic and explain how events and ideas are communicated. Discuss how people, events, and ideas interact in the texts. Have him or her contrast the authors’ points of view, organizational styles, and purposes."
 ---

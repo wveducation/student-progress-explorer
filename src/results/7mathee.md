@@ -1,11 +1,11 @@
 ---
-title: "Grade Grade 7 / Math / Expressions and Equations"
+title: "Grade 7 / Math / Expressions and Equations"
 subject: "math"
 grade: "7"
 area: "ee"
 next_steps:
-  - instructions: "With your student, find the price of a common product and write the price of buying x copies of the product as an equation. "
-  - instructions: "With your student, discuss sample spaces and the definition of probability, and design simulations for compound probability. ∙With your student, determine possible numbers of hot dogs and hamburgers sold if hot dogs cost $2.50 each, hamburgers cost $3.75 each, and the total sales are $130. Plot the solutions on a graph. "
-  - instructions: "With your student, discuss the qualitative properties of the graph of a car’s speed over time. Describe the graph of a ball’s height when thrown to your student and have him sketch it. "
+  - instructions: "With your student, discuss how you would compare the prices of similar products with unit prices while shopping."
+  - instructions: "With your student, express percentage increases in different but equivalent forms; for example, a 7% increase in m is 1.07m or m(1 + 0.07)."
+  - instructions: "With your student, discuss why you would rewrite expressions in different forms; for example, to visualize percentage increases."
   - instructions: "With your student, use known shapes to estimate the volume of a plastic bottle; interpret the slope and intercept of the line of best fit for the graph of time spent studying and math grades."
 ---

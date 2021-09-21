@@ -1,11 +1,10 @@
 ---
-title: "Grade Grade 5 / Math / Numbers and Operations - Base Ten and Fractions"
+title: "Grade 5 / Math / Numbers and Operations - Base Ten and Fractions"
 subject: "math"
 grade: "5"
 area: "nobtf"
 next_steps:
-  - instructions: "With your student, compare two different numerical sequences, write the rule used to create each sequence, and explain any apparent relationships between the corresponding terms of sequences. "
-  - instructions: "With your student, solve real-world story problems using variables while your student asks questions. Is my strategy working? Is my strategy generalizable? Does my answer make sense? "
-  - instructions: "With your student, draw irregular polygons on graph paper. Discuss how to decompose the polygon into triangles to find the area. Create data sets for your student to display using box plots. "
-  - instructions: "With your student, solve multi-step problems using different mathematical models and discuss the advantages of each model. ∙With your student, discuss complex problems that were solved incorrectly. Develop explanations for better solution paths."
+  - instructions: "With your student, find fraction models online to describe results for multiplying a whole number by a fraction; for example, multiply 3 by 3/4 by using 3 fraction models of 3/4."
+  - instructions: "With your student, use pictures to talk about fractions; for example, draw 8 flowers. Discuss that if the flowers are 2/3 of the set of flowers, then the entire set must have 12 flowers."
+  - instructions: "With your student, create and solve addition and subtraction problems involving fractions with different denominators. Discuss different methods for finding a common denominator."
 ---

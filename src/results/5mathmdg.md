@@ -1,11 +1,10 @@
 ---
-title: "Grade Grade 5 / Math / Measurement and Data and Geometry"
+title: "Grade 5 / Math / Measurement and Data and Geometry"
 subject: "math"
 grade: "5"
 area: "mdg"
 next_steps:
-  - instructions: "With your student, compare two different numerical sequences, write the rule used to create each sequence, and explain any apparent relationships between the corresponding terms of sequences. "
-  - instructions: "With your student, solve real-world story problems using variables while your student asks questions. Is my strategy working? Is my strategy generalizable? Does my answer make sense? "
-  - instructions: "With your student, draw irregular polygons on graph paper. Discuss how to decompose the polygon into triangles to find the area. Create data sets for your student to display using box plots. "
-  - instructions: "With your student, solve multi-step problems using different mathematical models and discuss the advantages of each model. ∙With your student, discuss complex problems that were solved incorrectly. Develop explanations for better solution paths."
+  - instructions: "With your student, discuss what units would be best when measuring. For example, would pounds or ounces be best when weighing a cow? Discuss why feet are not as exact as inches when measuring."
+  - instructions: "With your student, classify two-dimensional figures in a hierarchy based on their properties. For example, all squares are rectangles, but not all rectangles are squares."
+  - instructions: "With your student, use various tools to measure ingredients for recipes. Practice converting measurements, like quarts to cups. Discuss how to halve a recipe using equivalent fractions."
 ---

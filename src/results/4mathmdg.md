@@ -1,12 +1,10 @@
 ---
-title: "Grade Grade 4 / Math / Measurement and Data and Geometry"
+title: "Grade 4 / Math / Measurement and Data and Geometry"
 subject: "math"
 grade: "4"
 area: "mdg"
 next_steps:
-  - instructions: "With your student, create 5 squares, 1-by-1 to 5-by-5, and write the area on each square. Look for patterns in the areas and discuss how multiplication can help compute areas. "
-  - instructions: "With your student, use various tools to measure ingredients for recipes. Practice converting measurements, like quarts to cups. Discuss how to halve a recipe using equivalent fractions. "
-  - instructions: "With your student, create and solve word problems. Discuss what the problem is asking and whether more information is needed. Choose a strategy (picture, diagram, table of values) to solve. "
-  - instructions: "With your student, cut one paper plate into 4 equal parts and another into 6 equal parts. Discuss how pieces from each circle can be divided further so each circle has the same-sized pieces. "
-  - instructions: "With your student, create and solve addition and subtraction problems involving fractions with different denominators. Discuss different methods for finding a common denominator."
+  - instructions: "With your student, measure objects and practice converting those measurements within a system of units including centimeters and meters, cups and quarts, and hours and minutes."
+  - instructions: "With your student, classify triangles as acute, right, or obtuse, and as scalene, isosceles, or equilateral; and solve measurement problems involving distance, time, volume, and money."
+  - instructions: "With your student, classify quadrilaterals as squares, rectangles, trapezoids, parallelograms, or none of these; and create measurement problems involving distance, time, volume, and money."
 ---

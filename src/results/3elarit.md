@@ -1,10 +1,10 @@
 ---
-title: "Grade Grade 3 / English Learning Arts / Reading Informational Text"
+title: "Grade 3 / English Learning Arts / Reading Informational Text"
 subject: "ela"
 grade: "3"
 area: "rit"
 next_steps:
-  - instructions: "Ask your student to read different stories by the same author and compare and contrast the characters, events, and ideas. Have your student retell the stories and explain the characters’ points of view. Ask questions about the stories and direct your student to support the answers with details from the texts. "
-  - instructions: "Ask your student to read about a topic and then write a short essay that shares an opinion or explains information about the topic. The writing should be well-organized and include details, facts, linking words, an introduction, and a conclusion. Ask your student to revise and edit the essay. "
-  - instructions: "Ask your student to read several texts about a topic and to compare and contrast the ideas, organization, and points of view. Ask your student to determine the evidence that supports each author’s ideas and how charts, pictures, or diagrams supplement the information."
+  - instructions: "Read articles with your student and discuss the main ideas and supporting details. Help your student to find clues (like charts, key words, or pictures) to clarify information. Ask your student questions about the text, including questions about the author’s point of view."
+  - instructions: "Read articles with your student and ask him or her to determine the main ideas and supporting details. Ask your student to use clues (such as charts, key words, or pictures) to clarify information. Ask questions about the key ideas and direct your student to support his or her answers with details from the text."
+  - instructions: "Read articles with your student and ask him or her to make connections between concepts, points of view, or events. Discuss the similarities and differences between two articles about the same topic. Ask your student to use clues to clarify information and to support all answers with details from the texts."
 ---

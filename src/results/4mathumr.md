@@ -1,12 +1,10 @@
 ---
-title: "Grade Grade 4 / Math / Use Mathematical Reasoning"
+title: "Grade 4 / Math / Use Mathematical Reasoning"
 subject: "math"
 grade: "4"
 area: "umr"
 next_steps:
-  - instructions: "With your student, create 5 squares, 1-by-1 to 5-by-5, and write the area on each square. Look for patterns in the areas and discuss how multiplication can help compute areas. "
-  - instructions: "With your student, use various tools to measure ingredients for recipes. Practice converting measurements, like quarts to cups. Discuss how to halve a recipe using equivalent fractions. "
-  - instructions: "With your student, create and solve word problems. Discuss what the problem is asking and whether more information is needed. Choose a strategy (picture, diagram, table of values) to solve. "
-  - instructions: "With your student, cut one paper plate into 4 equal parts and another into 6 equal parts. Discuss how pieces from each circle can be divided further so each circle has the same-sized pieces. "
-  - instructions: "With your student, create and solve addition and subtraction problems involving fractions with different denominators. Discuss different methods for finding a common denominator."
+  - instructions: "With your student, create fraction models representing 1/4, 7/4, and 10/4. Compare these models and discuss how to convert them to mixed numbers. Discuss the patterns that you see."
+  - instructions: "With your student, create fraction models representing 1/4, 7/5, and 14/6. Compare these models and discuss how to convert them to mixed numbers. Discuss any patterns that you see."
+  - instructions: "With your student, make predictions about operations with fractions and whole numbers, and then test your predictions. For example, what happens when you add two fractions less than 1?"
 ---
