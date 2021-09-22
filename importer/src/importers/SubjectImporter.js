@@ -18,6 +18,7 @@ class SubjectImporter extends CollectionBase {
         var template = stripIndents`---
         name: "${this.data.subject}"
         id: "${this.data.subjectID}"
+        image: "${this.data.subjectImgPath}"
         ---`;
 
         return template;
