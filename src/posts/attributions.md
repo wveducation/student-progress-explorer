@@ -42,28 +42,36 @@ Photo by [Tetbirt Salim](https://unsplash.com/@salimtetbirt?utm_source=unsplash&
 
 Photo by [ThisisEngineering RAEng](https://unsplash.com/@thisisengineering?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
+![](/static/img/jeshoots-com-5EKw8Z7CgE4-unsplash_small.jpg)
+
+Photo by [JESHOOTS.COM](https://unsplash.com/@jeshoots?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/math?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+
+![](/static/img/chris-liverani-ViEBSoZH6M4-unsplash_small.jpg)
+
+Photo by [Chris Liverani](https://unsplash.com/@chrisliverani?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/math?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+  
 <hr/>
 
 ## Icons
 
 <div class="icon-atomic text-3xl"></div>
 
-Source: [The Noun Project](https://thenounproject.com/search/?q=atom&i=1418160)
+[The Noun Project](https://thenounproject.com/search/?q=atom&i=1418160)
 
 <div class="icon-book text-3xl"></div>
 
-Source: [The Noun Project](https://thenounproject.com/term/book/117517/)
+[The Noun Project](https://thenounproject.com/term/book/117517/)
 
 <div class="icon-eye_closed text-3xl"></div>
 
-Source: [The Noun Project](https://thenounproject.com/term/eye-closed/655328)
+[The Noun Project](https://thenounproject.com/term/eye-closed/655328)
 
 <div class="icon-eye_open text-3xl"></div>
 
-Source: [The Noun Project](https://thenounproject.com/term/eye/655334)
+[The Noun Project](https://thenounproject.com/term/eye/655334)
 
 <div class="icon-math text-3xl"></div>
 
-Source: [The Noun Project](https://thenounproject.com/term/math/3025346 )
+[The Noun Project](https://thenounproject.com/term/math/3025346 )
 
 </div>
