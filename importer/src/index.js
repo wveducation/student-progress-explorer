@@ -11,7 +11,6 @@ const ResultImporter = require('./importers/ResultImporter.js');
 const GradeImporter = require('./importers/GradeImporter');
 const SubjectImporter = require('./importers/SubjectImporter');
 const AreaImporter = require('./importers/AreaImporter');
-const TestImporter = require('./importers/TestImporter');
 
 const argv = yargs
     .option('source', {
