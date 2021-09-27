@@ -1,10 +1,7 @@
 const yargs = require('yargs');
-const { createReadStream, emptyDir, remove, removeSync } = require("fs-extra");
-const { mkdir, unlink, readdir, fstat, readdirSync } = require("fs");
+const { createReadStream, removeSync } = require("fs-extra");
+const { readdirSync } = require("fs");
 const parse = require("csv-parse");
-const mapKeys = require("lodash/mapKeys");
-const formatDate = require("date-fns/format");
-const dedent = require("dedent");
 const chalk = require('chalk');
 const path = require('path');
 const ResultImporter = require('./importers/ResultImporter.js');

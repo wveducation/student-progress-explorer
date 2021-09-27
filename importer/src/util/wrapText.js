@@ -8,7 +8,6 @@ const wrapText = (text, borderChar = '#') => {
         throw new Error(chalk.red(`❌ Could not create ${filepath}`));
     }
 
-    let output = "";
     let yBorders = "";
 
     for (let i = 0; i < text.length + 4; i++) {
