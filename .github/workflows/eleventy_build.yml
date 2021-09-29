@@ -17,9 +17,8 @@ jobs:
         uses: actions/checkout@v2
       - name: Install Node modules
         run: npm install
-      - name: Eleventy
-        run: |
-          ./node_modules/.bin/eleventy --output='_site/' --pathprefix='/'
+      - name: Build
+        run: npm run build
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
