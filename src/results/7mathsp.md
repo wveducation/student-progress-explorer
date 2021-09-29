@@ -7,5 +7,4 @@ next_steps:
   - instructions: "With your student, discuss why we use random samples to represent larger populations rather than studying the whole population."
   - instructions: "With your student, find the experimental and theoretical probability of drawing a nine out of a deck of playing cards."
   - instructions: "With your student, discuss sample spaces and the definition of probability, and design simulations for compound probability."
-  - instructions: "With your student, use known shapes to estimate the volume of a plastic bottle; interpret the slope and intercept of the line of best fit for the graph of time spent studying and math grades."
 ---

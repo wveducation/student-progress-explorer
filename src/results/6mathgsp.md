@@ -7,5 +7,4 @@ next_steps:
   - instructions: "With your student, draw triangles and quadrilaterals and discuss how to find their areas. Create a data set and discuss how to find the data’s mean and median and the differences between them."
   - instructions: "With your student, sketch nets made of rectangles and triangles to represent household objects and estimate their surface areas. Discuss statistical questions your student could ask classmates."
   - instructions: "With your student, draw irregular polygons on graph paper. Discuss how to decompose the polygon into triangles to find the area. Create data sets for your student to display using box plots."
-  - instructions: "With your student, solve multi-step problems using different mathematical models and discuss the advantages of each model. ∙With your student, discuss complex problems that were solved incorrectly. Develop explanations for better solution paths."
 ---
