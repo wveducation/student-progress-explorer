@@ -1,7 +1,7 @@
 {%- from "system/component.html" import component -%}
 <article class="{{ params.wrapperClasses }}">
     <div class="mb-4 {{ params.imageWrapperClasses }}">
-        {% if params.link.url %}<a href="{{ params.link.url }}" aria-label="{{ params.link.text }}" class="block transform hover:scale-1025">{% endif %}
+        {% if params.link.url %}<a href="{{ params.link.url }}" aria-label="{{ params.link.text }}" class="block transform hover:scale-1025" target="{{ params.link.target or '_self' }}">{% endif %}
         {% if params.image.src %}
             {% image { 
                 src: params.image.src, 
@@ -23,7 +23,7 @@
     <div class="{{ params.contentWrapperClasses }}">
         {% if params.title %}
         <h1 class="text-2xl {{ params.titleClasses }}">
-            {% if params.link.url %}<a href="{{ params.link.url }}">{% endif %}
+            {% if params.link.url %}<a href="{{ params.link.url }}" target="{{ params.link.target or '_self' }}">{% endif %}
             {{ params.title }}
             {% if params.link.url %}</a>{% endif %}
         </h1>
@@ -38,7 +38,8 @@
         {{ component('button', {
             url: params.link.url,
             text: params.link.text,
-            classes: params.link.classes
+            classes: params.link.classes,
+            target: params.link.target
         }) }}
         {% endif %}
         </footer>
