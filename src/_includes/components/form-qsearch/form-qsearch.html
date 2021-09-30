@@ -17,6 +17,7 @@
 {% set selectClasses = [default_selectClasses, theme_selectClasses, params.theme_selectClasses] | join(" ") %}
 {% set formClasses = [default_formClasses, theme_formClasses] | join(" ") %}
 <div class="overflow-hidden mx-auto rounded-2xl bg-white {{ wrapperClasses }}">
+  <p class="sr-only"><a href="/results">View all Next Steps</a></p>
   <form 
   class="{{ formClasses }}" 
   x-cloak
@@ -72,4 +73,8 @@
 
     <input type="submit" value="{{ params.submitText if params.submitText else 'Submit' }}" :disabled="!selection.grade && !selection.subject && !selection.area" class="{{ fieldClasses }} block md:inline-block flex-shrink w-full" />
   </form>
+
+  {% if params.appearance != 'horizontal' %}
+  <p class="text-sm text-center mt-4 opacity-80 hover:opacity-100"><a href="/results" class="underline">View all Next Steps</a></p>
+  {% endif %}
 </div>
