@@ -44,7 +44,7 @@ global_action:
             {% if (results[loop.index0-1].data.subject != result.data.subject) or (results[loop.index0-1].data.grade != result.data.grade) %}
             <ul class="col-start-3 col-end-6">
             {% endif %}
-               <li><a href="{{ result.url }}" class="underline text-brand_lightblue">{% getItemName collections.areas, result.data.area %}</a></li>
+               <li class="mb-2.5 leading-5"><a href="{{ result.url }}" class="underline text-brand_lightblue">{% getItemName collections.areas, result.data.area %}</a></li>
             {% if (results[loop.index].data.subject != result.data.subject) or (results[loop.index].data.grade != result.data.grade) %}
             </ul>
             {% endif %}
