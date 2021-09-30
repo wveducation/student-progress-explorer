@@ -5,12 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-      {{title}}
-    </title>
+    <title>{{title}}</title>
+    <meta property="og:title" content="{{title}}" />
+    <meta property="og:type" content="website" />
     {% if meta.description %}
-      <meta name="description" content="{{meta.description}}"/>
+    <meta name="description" content="{{meta.description}}"/>
+    <meta name="og:description" content="{{meta.description}}"/>
     {% endif %}
+    <meta name="og:url" content="https://student-progress.wvde.us{{ page.url }}">
+    <meta name="og:image" content="https://student-progress.wvde.us/static/img/og-image-default.jpg">
     {% block head %}{% endblock %}
 
     <link rel="icon" type="image/svg+xml" href="/static/favicon/favicon.svg">
