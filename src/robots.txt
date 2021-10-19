@@ -1,0 +1,4 @@
+Sitemap: https://student-progress.wvde.us/sitemap.xml
+
+User-agent: *
+Disallow:

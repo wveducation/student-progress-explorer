@@ -168,6 +168,7 @@ module.exports = function(eleventyConfig) {
 
   // Copy Static Files to /_Site
   eleventyConfig.addPassthroughCopy({
+    "./src/robots.txt": "./robots.txt",
     "./src/admin/config.yml": "./admin/config.yml",
     "./node_modules/prismjs/themes/prism-tomorrow.css": "./static/css/prism-tomorrow.css",
     "./src/static/fonts/icons/fonts/*": "./static/fonts/icons/fonts/",
