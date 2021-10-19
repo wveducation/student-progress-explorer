@@ -1,5 +1,7 @@
 [![🚀 Deploy Site](https://github.com/wveducation/student-progress-explorer/actions/workflows/eleventy_build.yml/badge.svg?branch=master)](https://github.com/wveducation/student-progress-explorer/actions/workflows/eleventy_build.yml)
 
+![alt text](https://github.com/wveducation/student-progress-explorer/blob/master/src/static/img/og-image-default.jpg?raw=true)
+
 # WV Student Progress Explorer
 This project provides a guide for students and parents in West Virginia to information about student performance in the areas of mathematics, English language arts, and science. 
 
