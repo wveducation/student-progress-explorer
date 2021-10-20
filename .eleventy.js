@@ -84,6 +84,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addShortcode("image", imageShortcode);
 
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
+
+  eleventyConfig.addShortcode("buildTime", () => `${new Date().toISOString()}`);
   
   eleventyConfig.addShortcode("getItemName", (collection, id) => {
 
