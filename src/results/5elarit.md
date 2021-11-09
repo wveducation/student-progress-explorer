@@ -1,5 +1,5 @@
 ---
-title: "Grade 5 / English Learning Arts / Reading Informational Text"
+title: "Grade 5 / English Language Arts / Reading Informational Text"
 subject: "ela"
 grade: "5"
 area: "rit"

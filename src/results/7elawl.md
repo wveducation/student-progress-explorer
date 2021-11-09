@@ -1,5 +1,5 @@
 ---
-title: "Grade 7 / English Learning Arts / Writing and Language"
+title: "Grade 7 / English Language Arts / Writing and Language"
 subject: "ela"
 grade: "7"
 area: "wl"
